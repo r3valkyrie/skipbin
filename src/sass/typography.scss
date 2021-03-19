@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+#pastetitle {
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  font-weight: bold;
+}
+#pastedesc {
+  font-family: "Source Code Pro Light", monospace;
+  font-size: 14px;
+  font-style: italic;
+}
 
 .card {
-  .title, .content, textarea, p, input{
-    font-family: "Source Code Pro 10", monospace
+  .title, .content, textarea, p, input {
+    font-family: "Source Code Pro", monospace;
+    font-size: 14px;
   }
 }

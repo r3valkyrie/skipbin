@@ -1,5 +1,6 @@
 let files = 0;
 let id = 0;
+const colorArray = ['#BF616A', '#D08770', '#EBCB8B', '#A3BE8C', '#B48EAD']
 
 const grow = (ele: HTMLTextAreaElement) => {
     ele.style.height = '1em'
@@ -22,7 +23,7 @@ const createNewCard = () => {
     div.innerHTML = `
     <div class="twelve columns card">
         <div class="title">
-            <span class="iconify" data-width="2em" data-height="2em" data-icon="clarity:file-line"></span>
+            <span style="color: ${colorArray[id % 5]}" class="iconify" data-width="2em" data-height="2em" data-icon="clarity:file-line"></span>
             <input class="title-input" id="title${id}" placeholder="Untitled Text Document"></input>
             <span class="iconify cardtrash" onclick="removeCard(this)" data-width="2em" data-height="2em" data-icon="clarity:trash-line"></span>
         </div>

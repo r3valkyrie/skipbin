@@ -15,8 +15,8 @@ textarea, input {
 .iconify {
   color: $nord4;
 }
-.disabled {
-  color: $nord3
+.iconify:hover {
+  cursor: pointer;
 }
 
 .card {
@@ -35,11 +35,12 @@ textarea, input {
     border-color: $nord2;
 
     .iconify {
-      color: $nord0;
+      cursor: initial;
     }
 
     .cardtrash {
       color: $nord11;
+      cursor: pointer;
     }
 
     .title-input {
@@ -50,5 +51,30 @@ textarea, input {
 
 .nav {
   border-color: $nord2;
-  background-color: $nord1;
+  background-color: $nord0;
+
+  .paste-meta {
+    background-color: transparent;
+    #pastetitle {
+      background-color: $nord0;
+    }
+    #pastedesc {
+      background-color: $nord0;
+    }
+  }
+
+  .iconify {
+    background-color: $nord1;
+  }
+
+  .iconify:hover {
+    background-color: $nord2;
+  }
+  .disabled {
+    color: $nord3
+  }
+  .disabled:hover {
+    background-color: $nord1;
+    cursor: initial;
+  }
 }
