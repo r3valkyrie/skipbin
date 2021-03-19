@@ -16,8 +16,9 @@ export interface PasteFile {
 }
 
 export interface Paste {
-    author: User
-    date: Date
+    author: User | undefined
+    date: number
+    expire: number
     encrypted: boolean
     title: string
     description: string

@@ -27,7 +27,9 @@
   },
   "nodemonConfig": {
     "ignore": [
-      "src/ts/**"
+      "src/ts/**",
+      ".git",
+      "node_modules"
     ]
   },
   "scripts": {

@@ -43,7 +43,9 @@ class App {
             browserSync({
                 files: ['**/*'],
                 port: port + 1,
-                proxy: `${this.hostname}:${this.port}`
+                proxy: `${this.hostname}:${this.port}`,
+                open: false,
+                online: false,
             })
         }
     }
