@@ -12,7 +12,7 @@ const genLinum = (ele: HTMLTextAreaElement, id: number) => {
     const linumElement = document.getElementById(`linum${id}`) as HTMLDivElement;
     let linumHTML = '';
     for (let i = 0; i < linums; i++) {
-        linumHTML += `<p>${i + 1}</p>`
+        linumHTML += `<p style="color: ${colorArray[id % 5]}">${i + 1}</p>`
     }
     linumElement.innerHTML = linumHTML;
 }
@@ -29,7 +29,7 @@ const createNewCard = () => {
         </div>
         <div class="content">
             <div class="linum" id="linum${id}">
-                <p>1</p>
+                <p style="color: ${colorArray[id % 5]}">1</p>
             </div>
             <div class="content-text">
                 <textarea
