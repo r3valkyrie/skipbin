@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title><%= locals.title %> | New</title>
-</head>
+<%- include('includes/head', {page: 'New'}); %>
 <body>
-<h1>wew</h1>
+<div class="container">
+    <%- include('components/nav'); %>
+    <div id="files">
+    </div>
+    <div class="row">
+        <div class="twelve columns add-container">
+            <span onclick="createNewCard()" class="iconify" data-width="2em" data-height="3em" data-icon="akar-icons:folder-add"></span>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/ejs@3.1.6/ejs.min.js"></script>
 <script src="index.js"></script>
+<script src="//code.iconify.design/1/1.0.6/iconify.min.js"></script>
 </body>
 </html>

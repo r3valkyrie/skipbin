@@ -1,9 +1,13 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "include": ["src/ts/**/*.ts"],
+  "watchOptions": {
+    "watchDirectory": "useFsEvents"
+  },
   "compilerOptions": {
     "lib": [
-      "es2020"
+      "es2020",
+      "DOM"
     ],
     "module": "commonjs",
     "target": "es2020",

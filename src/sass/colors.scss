@@ -1,0 +1,45 @@
+// Nord
+@import "../../node_modules/nord/src/sass/nord.scss";
+
+body {
+  background: $nord0
+}
+
+h1, h2,
+h3, h4,
+h5, p,
+textarea {
+  color: $nord6;
+}
+
+.iconify {
+  color: $nord4;
+}
+
+.card {
+  background-color: $nord0;
+  border-color: $nord2;
+  .content {
+    .linum {
+      background-color: $nord1;
+      p {
+        color: $nord12;
+      }
+    }
+  }
+  .title {
+    background-color: $nord2;
+    border-color: $nord2;
+
+    .iconify {
+      color: $nord10;
+    }
+    .cardtrash {
+      color: $nord11;
+    }
+  }
+}
+
+.nav {
+  border-color: $nord2;
+}

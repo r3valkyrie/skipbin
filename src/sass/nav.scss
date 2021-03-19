@@ -1,0 +1,17 @@
+.nav {
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 4px;
+  margin-top: 2em;
+
+  display: inline-flex;
+  flex-direction: row;
+  padding: 10px;
+  .iconify {
+    margin-inline: 0.5em;
+  }
+  .account {
+    margin-left: auto;
+    justify-self: flex-end;
+  }
+}

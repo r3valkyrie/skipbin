@@ -7,9 +7,9 @@ import browserSync from 'browser-sync';
 
 dotenv.config()
 
-const port = process.env.PORT ? parseInt(process.env.PORT) : 8000
-const hostname = process.env.HOSTNAME ? process.env.HOSTNAME : 'localhost'
-const title = process.env.TITLE ? process.env.TITLE : 'Skipbin'
+const port = parseInt(process.env.PORT as string) || 8000
+const hostname = process.env.HOSTNAME || 'localhost'
+const title = process.env.TITLE || 'Skipbin'
 
 // Check if we're in a production environment.
 const isProduction = process.env.NODE_ENV === 'production'

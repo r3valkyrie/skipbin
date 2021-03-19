@@ -1,0 +1,68 @@
+.card {
+  border-radius: 5px;
+  border-width: 4px;
+  border-style: solid;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    display: inline-flex;
+    padding: 10px;
+    border-bottom-style: dotted;
+    border-bottom-width: 4px;
+
+    .iconify {
+      margin-right: 0.5em;
+    }
+    .cardtrash {
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: row;
+
+    .linum {
+      flex-direction: column;
+      width: 3em;
+      p {
+        line-height: 1.5em;
+        margin-bottom: 0;
+        text-align: right;
+        margin-right: 0.5em;
+      }
+    }
+
+    .content-text {
+      width: 100%;
+
+      p {
+        line-height: 1.5em;
+        margin-bottom: 0;
+      }
+
+      label {
+        margin: 0;
+      }
+
+      textarea {
+        line-height: 1.5em;
+        border: 0 none white;
+        outline: none;
+        background-color: transparent;
+        overflow: hidden;
+        width: inherit;
+        margin-left: 0.5em;
+        padding: 0;
+        resize: none;
+        height: 4em;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+// Normalize and Skeleton sass
+@import "../../node_modules/normalize-scss/sass/normalize/import-now";
+@import "../../node_modules/skeleton-sass-official/src/core/config";
+@import "../../node_modules/skeleton-sass-official/src/themes/fresh/_vars";
+@import "../../node_modules/skeleton-sass-official/src/themes/fresh/include_components";
+@import "../../node_modules/skeleton-sass-official/src/themes/fresh/grid";
+
+// Local files
+@import "colors";
+@import "card";
+@import "typography";
+@import "nav";
+
+// Global settings
+body, html {
+  margin: 0;
+  height: 100%;
+}
+
+.add-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

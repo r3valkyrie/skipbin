@@ -21,15 +21,26 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "node-sass": "^5.0.0",
+    "nord": "^0.2.1",
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "src/ts/**"
+    ]
   },
   "scripts": {
     "tsc": "tsc",
     "clean": "rimraf public/*",
-    "sass": "node-sass src/sass/style.sass public/style.css",
+    "sass": "node-sass src/sass/style.scss public/style.css",
     "build": "npm-run-all clean tsc sass",
-    "start": "yarn run build && ts-node ./src/index.ts",
-    "dev": "nodemon --watch src --exec yarn run start"
+    "watch-sass": "node-sass -rw src/sass/ -o public/",
+    "watch-ts": "tsc --watch",
+    "nodemon": "nodemon ./src/index.ts",
+    "start:dev": "npm-run-all --parallel watch-sass watch-ts nodemon",
+    "start:prod": "yarn run build && NODE_ENV=production ts-node ./src/index.ts",
+    "start": "yarn run start:dev",
+    "dev": "yarn run start:dev"
   }
 }
