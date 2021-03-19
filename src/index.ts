@@ -2,24 +2,17 @@ import express from 'express';
 import * as Routes from "./routes";
 import * as Views from "./views";
 import dotenv from 'dotenv';
-
-let port: number = 8000
-let hostname: string = 'localhost'
-let title: string = 'Skipbin'
+import path from "path";
+import browserSync from 'browser-sync';
 
 dotenv.config()
 
-if (process.env.PORT) {
-    port = parseInt(process.env.PORT)
-}
-if (process.env.HOSTNAME) {
-    const hs = String(process.env.HOSTNAME)
-    hostname = hs.slice(-1) === '/' ? hs.substring(0, hs.length - 1) : hs
-}
+const port = process.env.PORT ? parseInt(process.env.PORT) : 8000
+const hostname = process.env.HOSTNAME ? process.env.HOSTNAME : 'localhost'
+const title = process.env.TITLE ? process.env.TITLE : 'Skipbin'
 
-if (process.env.TITLE) {
-    title = String(process.env.TITLE)
-}
+// Check if we're in a production environment.
+const isProduction = process.env.NODE_ENV === 'production'
 
 class App {
     // Wrapper for the application.
@@ -38,8 +31,21 @@ class App {
             console.log(`Express server started.\nHOSTNAME: ${this.hostname}\nPORT: ${this.port}`)
         })
 
+        // Register the path for static assets.
+        this.exp.use(express.static(path.join(__dirname, '../public/')))
+
+        // Register our routes and views
         Routes.register(this)
         Views.register(this)
+
+        // Start browsersync if we're in development mode.
+        if (!isProduction) {
+            browserSync({
+                files: ['**/*'],
+                port: port + 1,
+                proxy: `${this.hostname}:${this.port}`
+            })
+        }
     }
 }
 
