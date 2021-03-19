@@ -1,10 +1,9 @@
-import express from 'express';
-import {SkipbinApp} from "./types";
+import {Request, Response} from 'express';
+import {Wrapper} from "./types";
 
-const register = (App: SkipbinApp) => {
-    App.exp.get('/', (req: express.Request, res: express.Response) => {
-        res.send(`${App.hostname}:${App.port}`)
-    })
+// Register our routing rules.
+export const register = (App: Wrapper) => {
+    const {exp} = App
+    exp.get('/', (req: Request, res: Response) =>
+        res.render('index', {title: App.title}))
 }
-
-export default register;

@@ -1,7 +1,7 @@
 # env
 .env
 # dist
-dist/
+/build
 # .idea
 .idea/
 # Logs

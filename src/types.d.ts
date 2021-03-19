@@ -1,7 +1,8 @@
-export interface SkipbinApp {
+export interface Wrapper {
     port: number,
     hostname: string,
-    exp: express.Application
+    exp: express.Application,
+    title: string
 }
 
 export interface User {
