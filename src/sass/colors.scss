@@ -8,12 +8,15 @@ body {
 h1, h2,
 h3, h4,
 h5, p,
-textarea {
+textarea, input {
   color: $nord6;
 }
 
 .iconify {
   color: $nord4;
+}
+.disabled {
+  color: $nord3
 }
 
 .card {
@@ -32,14 +35,20 @@ textarea {
     border-color: $nord2;
 
     .iconify {
-      color: $nord10;
+      color: $nord0;
     }
+
     .cardtrash {
       color: $nord11;
+    }
+
+    .title-input {
+      background-color: transparent;
     }
   }
 }
 
 .nav {
   border-color: $nord2;
+  background-color: $nord1;
 }

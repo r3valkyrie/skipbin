@@ -8,9 +8,17 @@
 
   .title {
     display: inline-flex;
-    padding: 10px;
+    padding: 5px;
     border-bottom-style: dotted;
     border-bottom-width: 4px;
+    .title-input {
+      width: 100%;
+      margin-bottom: 0;
+      line-height: 1.5em;
+      border: 0 none white;
+      outline: none;
+      overflow: hidden;
+    }
 
     .iconify {
       margin-right: 0.5em;
@@ -59,6 +67,7 @@
         overflow: hidden;
         width: inherit;
         margin-left: 0.5em;
+        margin-bottom: 0;
         padding: 0;
         resize: none;
         height: 4em;

@@ -22,9 +22,9 @@ const createNewCard = () => {
     div.innerHTML = `
     <div class="twelve columns card">
         <div class="title">
-            <span class="iconify" data-width="1.5em" data-height="1.5em" data-icon="akar-icons:file"></span>
-            <p><b>title.txt</b></p>
-            <span class="iconify cardtrash" onclick="removeCard(this)" data-width="1.5em" data-height="1.5em" data-icon="akar-icons:trash-can"></span>
+            <span class="iconify" data-width="2em" data-height="2em" data-icon="clarity:file-line"></span>
+            <input class="title-input" id="title${id}" placeholder="Untitled Text Document"></input>
+            <span class="iconify cardtrash" onclick="removeCard(this)" data-width="2em" data-height="2em" data-icon="clarity:trash-line"></span>
         </div>
         <div class="content">
             <div class="linum" id="linum${id}">
@@ -74,5 +74,3 @@ const removeCard = (card: HTMLElement) => {
         }
     }
 }
-
-createNewCard()
